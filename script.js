@@ -5,3 +5,9 @@ $.get(
     dataObj.articles.forEach(data => {
         const card = document.createElement("div")
         card.className = 'cards-ch'
+
+        const title = document.createElement("h1")
+        title.className = 'title'
+        title.id = 'title'  
+        title.textContent = data.title
+        card.append(title)
