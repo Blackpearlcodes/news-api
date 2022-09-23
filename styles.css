@@ -205,3 +205,22 @@
     }
   }
   
+  @media screen and (max-width: 536px) {
+
+    .btn {
+        color: #67acb4;
+        border: 2px solid #67acb4;
+        background: #67acb4;
+        color: white;
+        padding: 5px 5px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .brand-name h1 {
+      font-size: 16px;
+      justify-content: center;
+    }
+    .container .content .cards {
+      justify-content: center;
+    }
