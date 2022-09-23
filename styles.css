@@ -228,3 +228,9 @@
       width: 30px;
       height: 30px;
     }
+    .container .content .content-2 .recent-payments table th:nth-child(2),
+    .container .content .content-2 .recent-payments table td:nth-child(2) {
+      display: none;
+    }
+  }
+  
