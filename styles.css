@@ -109,3 +109,11 @@
     
   }
   
+  .container .content .cards {
+    padding: 30px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
