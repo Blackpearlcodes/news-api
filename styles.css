@@ -176,3 +176,19 @@
     font-size: 1rem;
   }
   
+  .container .content .content-2 .new-products table td:nth-child(1) img {
+    height: 40px;
+    width: 40px;
+  }
+  #productsDiv,
+  #couponsDiv,
+  #adsDiv,
+  #chatDiv {
+    display: none;
+  }
+  @media screen and (max-width: 1050px) {
+    .side-menu li {
+      font-size: 18px;
+    }
+  }
+  
