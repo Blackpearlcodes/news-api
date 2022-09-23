@@ -86,3 +86,8 @@
     z-index: 1;
   }
   
+  .container .header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
