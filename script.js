@@ -36,4 +36,6 @@ $.get(
         link.textContent = 'Read More'
         card.append(link)
         
-        n
+        news.append(card)
+    });
+})
