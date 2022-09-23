@@ -29,3 +29,11 @@ $.get(
         content.id = 'content'
         content.textContent = data.description
         card.append(content)
+
+        const link = document.createElement('a')
+        link.className = 'linkToNews'
+        link.href = data.url
+        link.textContent = 'Read More'
+        card.append(link)
+        
+        n
