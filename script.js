@@ -11,3 +11,9 @@ $.get(
         title.id = 'title'  
         title.textContent = data.title
         card.append(title)
+
+        const img = document.createElement("img")
+        img.src = data.urlToImage
+        img.style.maxWidth = '95%'
+        img.style.margin = '35px auto'
+        card.append(img)
