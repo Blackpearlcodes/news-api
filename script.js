@@ -23,3 +23,9 @@ $.get(
         source.id = 'source'
         source.textContent = data.source.name
         card.append(source)
+
+        const content = document.createElement("div")
+        content.className = 'content'
+        content.id = 'content'
+        content.textContent = data.description
+        card.append(content)
