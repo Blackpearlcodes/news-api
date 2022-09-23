@@ -1,102 +1,41 @@
-// Bar Chart
+const news = document.getElementById("news")
+$.get(
+"https://newsapi.org/v2/everything?q=Apple&from=2022-09-23&sortBy=popularity&apiKey=5c6eae8d52cc49ac8478bba16c34b657",
+(dataObj) => {
+    dataObj.articles.forEach(data => {
+        const card = document.createElement("div")
+        card.className = 'cards-ch'
 
+        const title = document.createElement("h1")
+        title.className = 'title'
+        title.id = 'title'  
+        title.textContent = data.title
+        card.append(title)
 
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
+        const img = document.createElement("img")
+        img.src = data.urlToImage
+        img.style.maxWidth = '95%'
+        img.style.margin = '35px auto'
+        card.append(img)
 
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
-    }
-  }
-});
+        const source = document.createElement("div")
+        source.className = 'source'
+        source.id = 'source'
+        source.textContent = data.source.name
+        card.append(source)
 
+        const content = document.createElement("div")
+        content.className = 'content'
+        content.id = 'content'
+        content.textContent = data.description
+        card.append(content)
 
-// sidebar buttons show - hide
-
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [35, 49, 44, 24, 15];
-var barColors = ["red", "green", "blue", "orange", "brown"];
-
-new Chart("myChart", {
-    type: "bar",
-    data: {
-        labels: xValues,
-        datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-        }]
-    },
-    options: {
-        legend: { display: false },
-        title: {
-            display: true,
-            text: "World Wine Production 2018"
-        }
-    }
-});
-// show hide
-const homeBtn = document.getElementById("Home")
-const productsBtn = document.getElementById("Products")
-const couponsBtn = document.getElementById("Coupons")
-const adsBtn = document.getElementById("Ads")
-const chatBtn = document.getElementById("Chat")
-
-const homeDiv = document.getElementById("homeDiv")
-const productsDiv = document.getElementById("productsDiv")
-const couponsDiv = document.getElementById("couponsDiv")
-const adsDiv = document.getElementById("adsDiv")
-const chatDiv = document.getElementById("chatDiv")
-
-homeBtn.addEventListener("click", () => {
-    homeDiv.style.display = 'block'
-
-    productsDiv.style.display = 'none'
-    couponsDiv.style.display = 'none'
-    adsDiv.style.display = 'none'
-    chatDiv.style.display = 'none'
-})
-productsBtn.addEventListener("click", () => {
-    productsDiv.style.display = 'block'
-
-    homeDiv.style.display = 'none'
-    couponsDiv.style.display = 'none'
-    adsDiv.style.display = 'none'
-    chatDiv.style.display = 'none'
-})
-couponsBtn.addEventListener("click", () => {
-    couponsDiv.style.display = 'block'
-
-    homeDiv.style.display = 'none'
-    adsDiv.style.display = 'none'
-    productsDiv.style.display = 'none'
-    chatDiv.style.display = 'none'
-})
-adsBtn.addEventListener("click", () => {
-    adsDiv.style.display = 'block'
-
-    homeDiv.style.display = 'none'
-    couponsDiv.style.display = 'none'
-    productsDiv.style.display = 'none'
-    chatDiv.style.display = 'none'
-})
-chatBtn.addEventListener("click", () => {
-    chatDiv.style.display = 'block'
-
-    homeDiv.style.display = 'none'
-    couponsDiv.style.display = 'none'
-    adsDiv.style.display = 'none'
-    productsDiv.style.display = 'none'
+        const link = document.createElement('a')
+        link.className = 'linkToNews'
+        link.href = data.url
+        link.textContent = 'Read More'
+        card.append(link)
+        
+        news.append(card)
+    });
 })
