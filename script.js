@@ -17,3 +17,9 @@ $.get(
         img.style.maxWidth = '95%'
         img.style.margin = '35px auto'
         card.append(img)
+
+        const source = document.createElement("div")
+        source.className = 'source'
+        source.id = 'source'
+        source.textContent = data.source.name
+        card.append(source)
