@@ -129,3 +129,12 @@
     border-radius: 3px;
   }
   
+  .container .content .content-2 {
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 10px 15px;
+  }
+  
