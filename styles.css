@@ -224,3 +224,7 @@
     .container .content .cards {
       justify-content: center;
     }
+    .side-menu li img {
+      width: 30px;
+      height: 30px;
+    }
