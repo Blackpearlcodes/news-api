@@ -139,8 +139,7 @@
     flex-direction: column;
   }
 
-  
-  .container .content .content-2 .new-products {
+    .container .content .content-2 .new-products {
     background: white;
     min-height: 30vh;
     min-width: 60%;
